@@ -1,0 +1,357 @@
+.main.contact{
+  font-family: $contentFontFamily;
+}
+
+.locations-wrap{
+  padding-bottom: 50px;
+}
+
+.locations-menu{
+  margin-bottom: 50px;
+}
+
+.locations-menu__item{
+  display: inline-block;
+  @include font-size(20);
+  margin-right: 10%;
+
+  @include respond(1350){
+    @include font-size(18);
+  }
+  @include respond(1024){
+    @include font-size(16);
+  }
+  &.active{
+    .locations-menu__link{
+      color: $redDarkColor;
+    }
+  }
+}
+.locations-menu__link{
+  color: $lightGreyColor;
+  font-weight: 600;
+}
+
+.location-tabs{
+  margin-bottom: 50px;
+}
+
+.location-tab__item{
+  margin-bottom: 20px;
+  @include font-size(25);
+
+  @include respond(1350){
+    @include font-size(22);
+  }
+  @include respond(1024){
+    @include font-size(19);
+  }
+
+  &.active{
+
+    @include respond(420){
+      &:before{
+        display: none;
+      }
+    }
+  }
+  a{
+    display: block;
+  }
+  span{
+    display: inline-block;
+    margin-right: 6%;
+    color: $lightGreyColor;
+    vertical-align: middle;
+    text-transform: uppercase;
+    &:first-child{
+      color: $textColor;
+    }
+  }
+}
+
+.loction-tabs__content{
+
+}
+.location-tabs__content-block{
+  padding: 0 100px;
+  position: relative;
+  margin-bottom: 30px;
+
+  @include respond(992){
+    padding: 0;
+  }
+}
+
+.location-tabs__content-block-title{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #66676a;
+  font-weight: 600;
+  @include font-size(25);
+
+  @include respond(1350){
+    @include font-size(22);
+  }
+  @include respond(1024){
+    @include font-size(19);
+    position: relative;
+    margin-bottom: 25px;
+  }
+}
+
+.location-content__info {
+  background-color: #dfdfdf;
+  padding: 30px 20px;
+  color: #000;
+  margin-bottom: 25px;
+  position: relative;
+  @include font-size(17);
+
+  @include respond(1024){
+    @include font-size(15);
+  }
+
+  p {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    &.location-content__info-title {
+      padding-left: 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.location-content__info-icon{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &.icon-location{
+    background-image: url('#{$imgUrl}contact/icon-location.png');
+    @include size(19px,23px);
+  }
+  &.icon-clock{
+    background-image: url('#{$imgUrl}contact/icon-clock.png');
+    @include size(22px,22px);
+    bottom: unset;
+    //top: 7px;
+  }
+  &.icon-mob{
+    background-image: url('#{$imgUrl}contact/icon-mob.png');
+    @include size(18px,26px);
+  }
+  &.icon-messenger{
+    background-image: url('#{$imgUrl}contact/icon-messenger.png');
+    @include size(23px,23px);
+  }
+}
+
+
+.location-map__comment{
+  position: absolute;
+  bottom: 10px;
+  right: 23px;
+  cursor: pointer;
+  display: block;
+  .zoom-icon{
+    background: url("#{$imgUrl}contact/icon-zoom.png")no-repeat center /contain;
+    @include size(28px,27px);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+}
+
+.contact-details__wrap{
+  color: #000;
+  @include font-size(17);
+
+  @include respond(1024){
+    @include font-size(15);
+  }
+}
+
+.contact-details__info{
+  margin-bottom: 50px;
+  @include respond(992){
+    padding: 0;
+  }
+  span{
+    width: 100px;
+    display: inline-block;
+    @include respond(420){
+      width: 82px;
+    }
+  }
+
+}
+
+.contact-details__form-title{
+  @include respond(992){
+    padding: 0;
+  }
+}
+
+.contact-details__form{
+  max-width: 800px;
+  margin: 30px 0 80px;
+  @include respond(992){
+    max-width: 100%;
+    margin: 30px 0 30px;
+  }
+}
+
+.contact-details__form-row{
+  @include display-flex();
+  @include jc-space-between();
+
+  @include respond(768){
+   @include flex-wrap();
+  }
+
+  .col-half{
+    display: inline-block;
+    width: -webkit-calc(50% - 10px);
+    width: -moz-calc(50% - 10px);
+    width: calc(50% - 10px);
+    max-width: -webkit-calc(50% - 10px);
+    max-width: -moz-calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    overflow: hidden;
+
+    @include respond(768){
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+
+    &:first-child{
+      padding-right: 20px;
+      @include respond(768){
+        padding: 0;
+      }
+    }
+    &:last-child{
+      padding-left: 20px;
+      @include respond(768){
+        padding: 0;
+      }
+    }
+  }
+  .col-full{
+    width: 100%;
+  }
+
+  .form-input__wrap{
+    @include display-flex();
+
+    @include respond(992){
+      @include flex-wrap();
+    }
+    label{
+      @include font-size(17);
+      text-transform: uppercase;
+      color: #000;
+      display: inline-block;
+      min-width: 100px;
+      @include respond(1024){
+        @include font-size(15);
+        display: block;
+      }
+      &.contact-detail__email-label{
+        min-width: auto;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+#overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include square(100%);
+  background-color: rgba(0,0,0,0.2);
+  z-index: -2;
+  opacity: 0;
+  visibility: hidden;
+  &.active{
+    z-index: 100;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.contact-details__modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  padding: 20px;
+  background-color: #dfdfdf;
+  z-index: -2;
+  opacity: 0;
+  visibility: hidden;
+  @include transition(0.3s all ease-in-out);
+  @include scaleTranslate(0.5,0.5,0, 0);
+
+  &.active{
+    z-index: 101;
+    opacity: 1;
+    visibility: visible;
+    @include scaleTranslate(1,1,0px, 0);
+  }
+  iframe{
+    width: 100%;
+    height: 100% !important;
+  }
+}
+
+.modal-close{
+  position: fixed;
+  top: -4%;
+  right: -3%;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  cursor: pointer;
+
+  @include respond(992){
+    top: -15px;
+    right: -15px;
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background: $textColor;
+    height: 4px;
+    margin-top: -2px;
+  }
+  &::before {
+    @include transform(rotate(45deg));
+  }
+  &::after {
+    @include transform(rotate(-45deg));
+  }
+}
+

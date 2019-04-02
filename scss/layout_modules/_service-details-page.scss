@@ -1,0 +1,134 @@
+.main.service-details {
+  padding-bottom: 80px;
+  font-family: $contentFontFamily;
+  .banner{
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    //@include size(100%, 550px);
+    margin-bottom: 50px;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.service-details__content-title {
+  position: relative;
+  margin-bottom: 20px;
+  @include respond(992){
+    @include font-size(20);
+  }
+}
+
+.service-details__content-col{
+  display: inline-block;
+  &.lg{
+    width: 59%;
+    padding-right: 15px;
+
+    @include respond(768){
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  &.sm{
+    width: 39%;
+    padding-left: 15px;
+    vertical-align: top;
+    @include respond(768){
+      width: 100%;
+      padding-left: 0;
+    }
+    .video{
+      width: 100%;
+
+      iframe{
+        width: 100%;
+        @include respond(420){
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+.service-details__info {
+  margin-bottom: 30px;
+  letter-spacing: 4px;
+  line-height: 1.7;
+  font-weight: 300;
+  @include font-size(18);
+
+  @include respond(1024){
+    @include font-size(16);
+  }
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+
+  span{
+    display: block;
+    font-weight: 600;
+  }
+}
+
+.service-details__form-wrap{
+  width: 80%;
+  padding-top: 100px;
+  @include respond(992){
+    width: 100%;
+    padding-top: 70px;
+  }
+}
+
+.servive-details__form{
+  letter-spacing: 4px;
+  .form-checkbox__wrap{
+    margin-bottom: 0;
+    position: relative;
+  }
+}
+
+.service-details__form-heading{
+  margin: 30px 0;
+}
+
+.service-details__form-block{
+  margin-bottom: 30px;
+  p{
+    margin-bottom: 0;
+    @include font-size(18);
+    line-height: 1.7;
+
+    @include respond(1024){
+      @include font-size(16);
+    }
+  }
+}
+
+.service-details__form-col{
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: top;
+
+  &:last-of-type{
+    margin-right: 0;
+  }
+
+  @include respond(420){
+    display: block;
+    margin-right: 0;
+  }
+  .form-input__wrap{
+    &:last-of-type{
+      //margin-bottom: 0;
+      @include respond(768){
+        margin-bottom: 20px;
+        margin-bottom: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

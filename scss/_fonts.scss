@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'DIN-Regular';
+  src: url('#{$fontsUrl}DIN-Regular.eot');
+  src: url('#{$fontsUrl}DIN-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}DIN-Regular.woff2') format('woff2'),
+  url('#{$fontsUrl}DIN-Regular.woff') format('woff'),
+  url('#{$fontsUrl}DIN-Regular.ttf') format('truetype'),
+  url('#{$fontsUrl}DIN-Regular.svg#DIN-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('#{$fontsUrl}MyriadPro-Regular.eot');
+  src: url('#{$fontsUrl}MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}MyriadPro-Regular.woff2') format('woff2'),
+  url('#{$fontsUrl}MyriadPro-Regular.woff') format('woff'),
+  url('#{$fontsUrl}MyriadPro-Regular.ttf') format('truetype'),
+  url('#{$fontsUrl}MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSansHant';
+  src: url('#{$fontsUrl}NotoSansHant-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

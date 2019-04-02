@@ -1,0 +1,162 @@
+.main.brand,
+.main.brand-milestone,
+.main.brand-awards{
+  font-family: $contentFontFamily;
+  @include font-size(17);
+  color: #727476;
+  line-height: 1.7;
+
+  @include respond(1024){
+    @include font-size(15);
+  }
+
+  h1{
+    color: $textColor;
+  }
+}
+
+.brand__about{
+  max-width: 549px;
+  margin-bottom: 100px;
+
+  @include respond(1024){
+    margin-bottom: 70px;
+    max-width: 100%;
+  }
+}
+
+.brand-desc__wrap{
+  padding: 0 100px 100px 0px;
+  @include respond(992){
+    padding-right: 0;
+  }
+}
+
+.brand-desc__item{
+  @include display-flex();
+  margin-bottom: 50px;
+
+  @include respond(570){
+    @include flex-wrap();
+  }
+
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+}
+
+.brand-desc__item-icon{
+  width: 30%;
+  max-width: 30%;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include respond(570){
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+}
+
+.brand-desc__item-text{
+  width: 70%;
+  max-width: 70%;
+
+  @include respond(1280){
+    padding-left: 20px;
+  }
+
+  @include respond(570){
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.brand-desc__item-title{
+  @include font-size(25);
+  color: #6c6d70;
+
+  @include respond(1350){
+    @include font-size(22);
+  }
+  @include respond(1024){
+    @include font-size(19);
+  }
+
+}
+
+
+//MILESTONE PAGE
+
+.brand-milestone,
+.brand-awards{
+  .brand-desc__wrap{
+    margin-top: 100px;
+    padding: 0 20px 100px;
+    position: relative;
+
+    @include respond(768){
+      margin-top: 0;
+    }
+
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: calc(100% - 50px);
+      background: rgb(156, 46, 29); /* Old browsers */
+      background: -moz-linear-gradient(top, rgba(156, 46, 29, 1) 29%, rgba(156, 46, 29, 1) 31%, rgba(255, 255, 255, 1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(156, 46, 29, 1) 29%, rgba(156, 46, 29, 1) 31%, rgba(255, 255, 255, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(156, 46, 29, 1) 29%, rgba(156, 46, 29, 1) 31%, rgba(255, 255, 255, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9c2e1d', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
+    }
+  }
+  .brand-desc__item-text {
+    padding-left: 0px;
+    max-width: 64%;
+    width: 64%;
+    @include respond(1280){
+      padding-left: 0;
+    }
+    @include respond(768){
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+//AWARDS PAGE
+
+.brand-awards{
+
+  .brand-desc__wrap {
+    padding-bottom: 0;
+    margin-bottom: 100px;
+    &:before {
+      height: 100%;
+      background: rgba(156, 46, 29, 1);
+    }
+
+    .brand-desc__item-text {
+      //@include font-size(15);
+    }
+    .brand-desc__item-comment {
+      //@include font-size(14);
+      @include font-size(15);
+      color: $redDarkColor;
+    }
+  }
+
+}
+

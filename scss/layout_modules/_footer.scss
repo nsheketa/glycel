@@ -1,0 +1,66 @@
+.footer{
+  background: url("#{$imgUrl}footer.png")no-repeat center /cover;
+  background-position-y: 70%;
+  @include font-size(20);
+  color: #fff;
+  text-align: center;
+  padding: 30px 0 80px;
+
+  @include respond(1024){
+    @include font-size(18);
+  }
+}
+
+.footer__logo{
+  display: block;
+  @include center();
+  background: url("#{$imgUrl}logo-white.svg")no-repeat center /contain;
+  @include size(190px, 39px);
+  //max-width: 190px;
+  margin-bottom: 25px;
+}
+
+.footer__row{
+  margin-bottom: 25px;
+  &.contacts{
+    .footer__item{
+      &:first-child{
+        margin-right: 5%;
+      }
+    }
+  }
+}
+
+.footer__item{
+  display: inline-block;
+  color: #fff;
+  &:hover,
+  &:focus,
+  &:active{
+    color: #fff;
+  }
+}
+
+.footer-socials-icon{
+  display: inline-block;
+  margin: 0 15px;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-socials__icon-mail{
+  background-image: url('#{$imgUrl}icon-mail-white.svg');
+  @include size(26px, 20px);
+}
+
+.footer-socials__icon-insta{
+  background-image: url('#{$imgUrl}icon-insta-white.svg');
+  @include size(29px, 29px);
+}
+
+.footer-socials__icon-fb{
+  background-image: url('#{$imgUrl}icon-fb-white.svg');
+  @include size(12px, 27px);
+}

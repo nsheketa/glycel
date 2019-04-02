@@ -1,0 +1,53 @@
+.main.share{
+  font-family: $contentFontFamily;
+  font-weight: 300;
+  @include font-size(17);
+
+  @include respond(1024){
+    @include font-size(15);
+  }
+}
+
+.share-videos__wrap{
+  padding-bottom: 100px;
+
+  @include respond(1024){
+    padding-bottom: 70px;
+  }
+}
+
+.share-videos__item{
+  display: block;
+  margin-bottom: 30px;
+
+  &:hover,
+  &:focus{
+    .share-videos__img{
+      img{
+        @include scaleTranslate(1.1,1.1,0,0);
+      }
+    }
+    .share-videos__title{
+      background-color: #eaeae9;
+      color: #656565;
+    }
+  }
+}
+
+.share-videos__img{
+  overflow: hidden;
+  img{
+    width: 100%;
+    @include transition(0.3s all ease);
+  }
+}
+
+.share-videos__title{
+  @include transition(0.3s all ease);
+  background-color: #656565;
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  min-height: 60px;
+  line-height: 1.4;
+}

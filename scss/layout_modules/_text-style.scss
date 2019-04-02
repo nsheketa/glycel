@@ -1,0 +1,104 @@
+h1,.h1{
+  @include font-size(51);
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin-bottom: 50px;
+  font-family: $contentFontFamily;
+  line-height: 1.5;
+}
+
+.h1__subtitle{
+  @include font-size(18);
+  letter-spacing: 1px;
+  font-weight: 200;
+  line-height: 1.4;
+  font-family: $contentFontFamily;
+}
+
+h2,.h2{
+  @include font-size(20);
+  margin-bottom: 25px;
+  font-weight: 600;
+  position: relative;
+  font-family: $contentFontFamily;
+  line-height: 1.5;
+}
+
+h3,.h3{
+  @include font-size(16);
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.section__content{
+  @include font-size(14);
+  font-weight: 500;
+  margin-bottom: 25px;
+  letter-spacing: 1.3px;
+}
+
+.section__content--light{
+  @include font-size(15);
+  font-weight: 300;
+  margin-bottom: 25px;
+  letter-spacing: 1.3px;
+}
+
+.title-line{
+  position: relative;
+  &:before{
+    content: '';
+    display: inline-block;
+    margin: 0px 25px 0 0px;
+    width: 1px;
+    height: 60px;
+    vertical-align: top;
+    background-color: $redDarkColor;
+    @include respond(1024) {
+      height: 40px;
+    }
+    @include respond(420){
+      display: none;
+    }
+  }
+  &.middle{
+    &:before{
+      vertical-align: middle;
+    }
+  }
+  &.top{
+    &:before{
+      vertical-align: top;
+    }
+  }
+
+}
+
+@media  screen and (max-width: 992px) {
+  h1, .h1{
+    @include font-size(45);
+  }
+
+  h2,.h2{
+    @include font-size(18);
+  }
+
+  h3,.h3{
+    @include font-size(15);
+  }
+
+  .h2{
+    @include font-size(18);
+  }
+  .section__content,
+  .section__content--light{
+    @include font-size(12);
+    margin-bottom: 20px;
+  }
+}
+
+@media  screen and (max-width: 768px) {
+  h1, .h1 {
+    @include font-size(35);
+  }
+}

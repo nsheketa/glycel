@@ -1,0 +1,29 @@
+@import "../modules/bootstrap/scss/bootstrap-grid";
+@import "../modules/bootstrap/scss/bootstrap";
+@import "../slick/slick.scss";
+
+@import "customVariables";
+@import "customMixins";
+
+@import "fonts";
+
+@import "customStyles";
+
+//importing style modules for pages and section
+
+@import "layout_modules/text-style";
+@import "layout_modules/general-styles";
+@import "layout_modules/animation";
+@import "layout_modules/header";
+@import "layout_modules/homepage";
+@import "layout_modules/footer";
+@import "layout_modules/treatment-page";
+@import "layout_modules/products-pages";
+@import "layout_modules/product-details-pages";
+@import "layout_modules/contact-page";
+@import "layout_modules/service-details-page";
+@import "layout_modules/membership-page";
+@import "layout_modules/brand-page";
+@import "layout_modules/share-page";
+
+

@@ -1,0 +1,38 @@
+$Din: 'DIN-Regular';
+$Notosans: 'NotoSansHant';
+$Myriad: 'Myriad Pro',sans-serif;
+
+$baseFontFamily: $Din, 'NotoSansHant',  "Microsoft JhengHei", STHeiti, 华文黑体, SimHei, 黑体, sans-serif;
+$contentFontFamily: $Notosans, 'Microsoft JhengHei', sans-serif;
+
+@mixin font-size($size:18) {
+  font-size: $size * 1px;
+  font-size: ($size / $baseFontSize) * 1rem;
+}
+
+$baseFontSize: 18;
+$baseFontSizePixel: $baseFontSize * 1px;
+$baseLineHeight: 1.3;
+$textColor: #67686b;
+$titleColor: #231f20;
+$baseLetterSpacing: 1px;
+$bodyBackground: #fff;
+
+$redColor: #b91e1e;
+$redDarkColor: #9c2e1d;
+$blackColor: #231f20;
+$lightGreyColor: #d0d0d0;
+
+$fontsUrl: "../fonts/";
+$imgUrl: "../img/";
+
+//bootstrap overwrite
+
+$grid-breakpoints: (
+ xs: 0,
+ sm: 576px,
+ md: 768px,
+ lg: 992px,
+ xl: 1200px,
+ xxl:1400px
+)
