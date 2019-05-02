@@ -100,10 +100,11 @@ $(document).ready(function () {
     //parallax
     function homepageParallax() {
         controller = new ScrollMagic.Controller({vertical: true});
+        var duration = h +h/2;
         // build tween
         $(".parallax-fast-01").each(function () {
             var tl = new TimelineMax();
-            tl.to(this, 1, {y: 60, ease: Ease.easeNone});
+            tl.to(this, 2.5, {y: 60, ease: Back.easeOut.config(1.7)});
 
             // build scene
             var scene = new ScrollMagic.Scene({
@@ -119,7 +120,7 @@ $(document).ready(function () {
         $(".parallax-fast-02").each(function () {
             $(".parallax-fast-02").css('margin-top', '-3px');
             var tl = new TimelineMax();
-            tl.to(this, 1, {y: 55, ease: Ease.easeNone});
+            tl.to(this, 2.5, {y: 55, ease: Back.easeOut.config(1.7)});
 
             // build scene
             var scene = new ScrollMagic.Scene({
@@ -135,7 +136,7 @@ $(document).ready(function () {
         $(".parallax-slow").each(function () {
             var tl = new TimelineMax();
 
-            tl.to(this, 1, {y: -10, ease: Ease.easeNone});
+            tl.to(this, 2.5, {y: -10, ease: Back.easeOut.config(1.7)});
 
             // build scene
             var scene = new ScrollMagic.Scene({triggerElement: ".service", duration: $('.service').height() * 2})
@@ -209,6 +210,3 @@ $(document).ready(function () {
 
 });
 
-$(window).on('load', function () {
-
-});

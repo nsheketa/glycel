@@ -9441,13 +9441,18 @@ body.no-scroll, html.no-scroll {
   position: relative;
   margin-bottom: 30px;
   display: block;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none; }
   .service-list__item img {
     width: 100%;
     max-width: 100%;
-    -webkit-transition: 0.5s all ease-in-out;
-    -o-transition: 0.5s all ease-in-out;
-    transition: 0.5s all ease-in-out; }
+    -webkit-transition: 2.5s all ease-in-out;
+    -o-transition: 2.5s all ease-in-out;
+    transition: 2.5s all ease-in-out; }
   .service-list__item:hover img {
     -ms-transform: scale(1.2, 1.2) translateX(0) translateY(0) rotate(0.02deg);
     -webkit-transform: scale(1.2, 1.2) translateX(0) translateY(0) rotate(0.02deg);
